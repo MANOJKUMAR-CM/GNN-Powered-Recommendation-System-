@@ -1,7 +1,6 @@
 # 🛒 H&M Graph Neural Network Recommendation System
 
-This project builds a **Graph Neural Network (GNN)-based recommendation system** on the  
-**H&M Personalized Fashion Recommendations dataset (Kaggle)**.  
+This project builds a **Graph Neural Network (GNN)-based recommendation system** on the **H&M Personalized Fashion Recommendations dataset (Kaggle)**.  
 
 Customers and articles are modeled as a **heterogeneous bipartite graph**, and a GNN (GraphSAGE) is trained to perform **link prediction** for personalized product recommendations.
 
@@ -40,8 +39,8 @@ Customers and articles are modeled as a **heterogeneous bipartite graph**, and a
 | **Average Precision**| 0.9101 |
 | **F1-score**         | 0.89   |
 
-✅ Strong performance on a **large-scale real-world dataset** (>2M interactions).  
-✅ Outperforms simple baselines like matrix factorization or collaborative filtering.  
+- Strong performance on a **large-scale real-world dataset** (>2M interactions).
+- Outperforms simple baselines like LightGBM/ matrix factorization models.  
 
 ---
 
