@@ -1,22 +1,33 @@
 # 🛒 H&M Graph Neural Network Recommendation System
 
-This project builds a **Graph Neural Network (GNN)-based recommendation system** on the **H&M Personalized Fashion Recommendations dataset**.  
-Customers and articles are modeled as a **heterogeneous bipartite graph**, and a GNN (GraphSAGE / GCN) is trained to perform **link prediction** for personalized product recommendations.
+This project builds a **Graph Neural Network (GNN)-based recommendation system** on the  
+**H&M Personalized Fashion Recommendations dataset (Kaggle)**.  
+
+Customers and articles are modeled as a **heterogeneous bipartite graph**, and a GNN (GraphSAGE) is trained to perform **link prediction** for personalized product recommendations.
 
 ---
 
 ## 🚀 Project Overview
+
 - **Dataset**: [H&M Personalized Fashion Recommendations (Kaggle)](https://www.kaggle.com/competitions/h-and-m-personalized-fashion-recommendations)  
-- **Graph Construction**:
+
+- **Graph Construction**:  
   - **Nodes**:  
-    - Customers (features: demographics, embeddings → 9-dim)  
-    - Articles (features: metadata, embeddings → 683-dim)  
-  - **Edges**: Customer → Article purchases/interactions  
+    - `customer`: 1,371,980 nodes with 9-dimensional features (demographics & embeddings)  
+    - `article`: 105,542 nodes with 683-dimensional features (metadata & embeddings)  
+  - **Edges**: 31,788,324 purchase interactions (customer ↔ article), with time and edge attributes  
+
+- **Downsampled Graph** (for demonstration / compute efficiency):  
+  - Customers: 100,000  
+  - Articles: 82,477  
+  - Edges: 2,327,067 interactions  
+
 - **Model**:  
   - Implemented **Heterogeneous Graph Neural Networks** with PyTorch Geometric  
-  - Experimented with **GraphSAGE** and **GCN** layers  
+  - Experimented with **GraphSAGE** layers  
   - Learned refined embeddings for customers & articles  
-- **Task**: **Link prediction** (will customer *X* buy article *Y*?).  
+
+- **Task**: **Link prediction** → Predict if customer *X* will purchase article *Y*  
 
 ---
 
@@ -27,21 +38,20 @@ Customers and articles are modeled as a **heterogeneous bipartite graph**, and a
 | **Accuracy**         | 0.8475 |
 | **ROC-AUC**          | 0.9170 |
 | **Average Precision**| 0.9101 |
-| **F1-score**         | 0.85   |
+| **F1-score**         | 0.89   |
 
-✅ Strong performance on a large-scale dataset (>2M interactions).  
+✅ Strong performance on a **large-scale real-world dataset** (>2M interactions).  
 ✅ Outperforms simple baselines like matrix factorization or collaborative filtering.  
 
 ---
 
 ## 🛠️ Tech Stack
+
 - **Language**: Python  
 - **Libraries**:  
   - [PyTorch](https://pytorch.org/)  
   - [PyTorch Geometric](https://pytorch-geometric.readthedocs.io/)  
-  - Scikit-learn (metrics)  
-  - Pandas, NumPy  
+  - [Scikit-learn](https://scikit-learn.org/)  
 
 ---
 
-## 📂 Repository Structure
