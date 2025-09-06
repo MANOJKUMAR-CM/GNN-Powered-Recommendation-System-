@@ -54,3 +54,30 @@ Customers and articles are modeled as a **heterogeneous bipartite graph**, and a
 
 ---
 
+## ✨ Key Highlights
+
+- Handles **heterogeneous graph structure** (customer ↔ article bipartite graph).  
+- Incorporates **temporal purchase information** and **article/customer metadata**.  
+- Scalable to **millions of nodes and edges**.  
+- Demonstrates application of **Graph Neural Networks in personalized recommendations**.  
+
+---
+
+## 🔮 Future Work
+
+- Add **Hit@K / Recall@K** evaluation for top-K recommendation quality  
+- Explore **temporal graph models** (e.g., TGAT, TGN)  
+- Deploy trained model as an **API-based recommender service**  
+
+---
+## 📧 Contact
+
+If you have questions, suggestions, or just want to connect, feel free to reach out!
+
+- **Name**: Manoj Kumar.CM  
+- **Email**: [manoj.kumar@dsai.iitm.ac.in]  
+- **GitHub Profile**: [Manoj Kumar C M](https://github.com/MANOJKUMAR-CM)
+---  
+💡 **Have feedback or suggestions? Feel free to contribute!**  
+
+
